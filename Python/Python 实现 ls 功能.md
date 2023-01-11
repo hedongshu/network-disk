@@ -1,39 +1,20 @@
----
-title: Python 实现 ls 功能
-date: 2019-06-13 15:21:47
-permalink: /pages/72fa23/
-tags: 
-  - null
-author: 
-  name: evan
-  link: https://github.com/hedongshu
-comment: false
-categories: 
-  - Python
----
 # Python 实现 ls 功能
 
-在linux中使用 `ls` 命令，可以展示出路径下所有文件
+在 linux 中使用 `ls` 命令，可以展示出路径下所有文件
 
+下面代码使用 python 实现了 ls 的基本功能：
 
-
-下面代码使用python实现了ls的基本功能：
-
- ```shell
+```shell
 > ls [-h] [-l] [-a] [path]
 
 > positional arguments:
-  path 文件路径
+ path 文件路径
 
 > optional arguments:
-  -h, --help  显示帮助
-  -l 显示详情
-  -a, --all 显示隐藏文件
- ```
-
-
-
-
+ -h, --help  显示帮助
+ -l 显示详情
+ -a, --all 显示隐藏文件
+```
 
 ## 实现：
 
@@ -92,9 +73,7 @@ if __name__ == '__main__':   # .py文件直接被运行的时候 执行下面的
 
 ```
 
-
-
-##  使用
+## 使用
 
 ```shell
  python3 ls.py -al
@@ -102,4 +81,3 @@ if __name__ == '__main__':   # .py文件直接被运行的时候 执行下面的
 > ['-rw-r--r--', 1, 'x', 'staff', 4729, '15:06', 'hello.py']
   ['-rw-r--r--', 1, 'x', 'staff', 1307, '15:39', 'ls.py']
 ```
-

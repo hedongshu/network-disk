@@ -1,19 +1,4 @@
----
-title: Python 基础语法练习
-date: 2019-05-31 10:30:10
-permalink: /pages/4a39cd/
-tags: 
-  - null
-author: 
-  name: evan
-  link: https://github.com/hedongshu
-comment: false
-categories: 
-  - Python
----
 # Python 基础语法练习
-
-
 
 ```python
 !/usr/bin/env python3
@@ -115,6 +100,5 @@ for i in range(9):
     n = (n + 1) * 2
 
 print(n)
- 
-```
 
+```

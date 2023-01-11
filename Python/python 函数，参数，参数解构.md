@@ -1,34 +1,15 @@
----
-title: python 函数，参数，参数解构
-date: 2019-06-03 13:47:19
-permalink: /pages/0eb873/
-tags: 
-  - null
-author: 
-  name: evan
-  link: https://github.com/hedongshu
-comment: false
-categories: 
-  - Python
----
 # python 函数
 
+## 函数的作用
 
-
-##  函数的作用
-
-* 结构化编程对代码的最基本封装
-* 为了复用，减少冗余代码
-* 代码更加简洁美观，可读易懂
-
-
+- 结构化编程对代码的最基本封装
+- 为了复用，减少冗余代码
+- 代码更加简洁美观，可读易懂
 
 ## 函数的分类
 
-* 内建函数：max()  reversed()  等
-* 库函数： math.ceil()  等
-
-
+- 内建函数：max() reversed() 等
+- 库函数： math.ceil() 等
 
 ## 函数定义
 
@@ -43,50 +24,44 @@ sum(1， 2)
 
 ```
 
-* 函数名就是标识符，命名要求一样
-* 语句块必须缩进，约定4个空格
-* 没有return语句，会返回一个None
-
-
+- 函数名就是标识符，命名要求一样
+- 语句块必须缩进，约定 4 个空格
+- 没有 return 语句，会返回一个 None
 
 # 函数参数
 
-* 位置参数
+- 位置参数
 
-  * `def f (x,y,z)` 调用使用 `f(1, 2, 3)`
-  * 按照参数定义顺序传入实参
+  - `def f (x,y,z)` 调用使用 `f(1, 2, 3)`
+  - 按照参数定义顺序传入实参
 
-* 关键字参数
+- 关键字参数
 
-  * `def f (x, y, z)` 调用使用 `f(x=1, y=2, z=3)`
-  * 参数指定形参名字，传参顺序可以与定义顺序不同
+  - `def f (x, y, z)` 调用使用 `f(x=1, y=2, z=3)`
+  - 参数指定形参名字，传参顺序可以与定义顺序不同
 
-* 传参
+- 传参
 
   ```python
   f(z=None, y=10, x=[1])
   f((1,), z=6, y=4.1)
   ```
 
-  
-
-* 参数默认值
+- 参数默认值
 
   参数默认值可以在未传入足够参数的时候，自动使用默认参数
 
   ```python
   def sum (x=2, y=3):
   	return x+y
-  
+
   # 调用
   sum()
   sum(1)
   sum(y=5 )
   ```
 
-  
-
-* 可变参数
+- 可变参数
 
   一个形参可以匹配任意个参数
 
@@ -97,11 +72,9 @@ sum(1， 2)
     for x in nums:
       sum += x
     return sum
-  
+
   add(1, 2, 3, 4)
   ```
-
-  
 
   可变参数使用关键字
 
@@ -109,12 +82,10 @@ sum(1， 2)
   def showconfig(**kwargs):
     for k,v in kwargs.items():
       print(k, y)
-      
-   
+
+
   showconfig(host='asdf', port='asdfsaf')
   ```
-
-  
 
   可变参数混合使用
 
@@ -124,19 +95,16 @@ sum(1， 2)
   # 调用
   show('tom', '1234', port='8080')
   show('tom', pw='1234', port='8080', host='127,0,0.1')
-  
-  
+
+
   # 声明
   def show(name, *args, **kwargs)
   # 调用
   show('tom', '123','asdf', port='8080')
   show('tom', '123', port='8080', host='127.0.0.1')
-  
-  
+
+
   ```
-
-
-
 
 # 参数解构
 
@@ -160,15 +128,13 @@ add(**d)
 
 ```
 
-
-
 # 高阶函数
 
-* 定义
+- 定义
 
   接受一个或者多个函数作为参数
 
-  or  返回一个函数
+  or 返回一个函数
 
   ```python
   # 计数器
@@ -177,20 +143,20 @@ add(**d)
     	base += step
       return bask
    	return inc
-  
+
   foo = counter(5)
   foo()
   ```
 
-* 匿名函数
+- 匿名函数
 
-  Python的lambda表达式基本语法是在冒号（：）左边放原函数的参数，可以有多个参数，用逗号（，）隔开即可；冒号右边是返回值。
+  Python 的 lambda 表达式基本语法是在冒号（：）左边放原函数的参数，可以有多个参数，用逗号（，）隔开即可；冒号右边是返回值。
 
   ```python
   fun = lambda x, y : a > b
   fun(1, 2)
-  
-  
+
+
   # 排序
   def mysort(lst, fun=lambda a, b: a > b):
       newList = []
@@ -202,30 +168,26 @@ add(**d)
           else:
               newList.append(i)
       return newList
-  
-  
+
+
   lst = [1, 5, 2, 54, 12, 65, 2]
   print(mysort(lst, lambda a, b: a < b))
-  
+
   ```
 
+- 偏函数
 
+  `partial()`可以设定参数的默认值，降低调用函数的难度
 
- * 偏函数
+  ```python
+  import functools
+  #
+  int2 = functools.partial(int, base=2)
 
-   `partial()`可以设定参数的默认值，降低调用函数的难度
+  int2('1000000')
 
-   ```python
-   import functools
-   # 
-   int2 = functools.partial(int, base=2)
-   
-   int2('1000000')
-   
-   int2('1010101')
-   ```
-
-   
+  int2('1010101')
+  ```
 
 # 闭包
 
@@ -247,8 +209,6 @@ print(counter())
 print(counter())
 print(counter())
 ```
-
-
 
 # 装饰器
 
@@ -272,15 +232,13 @@ now = log(now)
 @log('execute')
 def now():
     print('2015-3-25')
-    
+
  # 相当于下面
 
 now = log('execute')(now)
 ```
 
-
-
-* 栗子
+- 栗子
 
 ```python
 import time
@@ -327,6 +285,3 @@ print(fast(11, 22))
 print(slow(11, 22, 33))
 
 ```
-
-
-
