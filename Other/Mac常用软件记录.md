@@ -1,5 +1,5 @@
 系统增强及小工具：
-* 标平滑滚动：Mos - https://github.com/Caldis/Mos
+- 鼠标平滑滚动：Mos - https://github.com/Caldis/Mos
 - 右键增强：超级右键 - https://www.better365.cn/irightmouse.html
 - 全局搜索：Alfred4 - https://www.alfredapp.com
 - 垃圾清理、资源监控：Tencent Lemon - https://lemon.qq.com
