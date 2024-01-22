@@ -1,4 +1,9 @@
-[toc]
+---
+date: 2022-01-11 09:46:36
+tags:
+  - yaml
+title: yaml 语言简易教程
+---
 
 # yaml 语言教程
 

@@ -1,4 +1,10 @@
-[toc]
+---
+date: 2022-01-11 09:46:36
+tags:
+  - vscode
+  - remote-ssh
+title: 使用 vscode 远程连接 Linux 服务器进行开发
+---
 
 # 使用 vscode 远程连接 Linux 服务器进行开发---使用工具 remote-ssh
 

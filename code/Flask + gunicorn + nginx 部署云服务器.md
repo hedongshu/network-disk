@@ -1,4 +1,10 @@
-# Flask + gunicorn + nginx 部署云服务器
+---
+date: 2022-01-11 09:46:36
+tags:
+  - 服务器
+  - Flask部署
+title: Flask + gunicorn + nginx 部署腾讯云服务器
+---
 
 # Flask + gunicorn + nginx 部署腾讯云服务器
 

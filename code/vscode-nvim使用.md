@@ -1,4 +1,10 @@
-[toc]
+---
+date: 2022-01-11 09:46:36
+tags:
+  - vim
+  - vscode
+title: vscode-nvim 使用
+---
 
 # vscode-nvim 使用
 
